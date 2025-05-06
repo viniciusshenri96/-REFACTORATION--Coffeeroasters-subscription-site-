@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+:root{
+    /* cores */
+    --black:#000000;
+    --gray-text: #83888F;
+    --gray-text-hover: #2C343E;
+    --grey2: #333D4B;
+    --white: #ffffff;
+
+}
+#about-us{
+    background-color: #db1b1b;
+}

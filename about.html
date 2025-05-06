@@ -6,32 +6,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/pages/about.css">
   <title>Frontend Mentor | Coffeeroasters subscription site</title>
 </head>
 <body>
 <header>
   <nav>
     <img src="assets/img/shared/desktop/logo.svg" alt="">
-    <li id="menu-header">
-      <ul class="menu-itens-links"><a href="index.html">Home</a></ul>
-      <ul class="menu-itens-links"><a href="about.html">About us</a></ul>
-      <ul class="menu-itens-links"><a href="plan.html">Create your plan</a></ul>
-    </li>
+    <section id="menu-hamburguer">
+      <a href=""><i class="fa fa-bars" id="menu-toggle"></i></a>
+    </section>
   </nav>
 </header>
 
 <main>
-    <section id="about-us">
-      <h1>About us</h1>
-      <p>
-        Coffeeroasters began its journey of exotic discovery in 1999, highlighting stories of
-        coffee from around the world. We have since been dedicated to bring the perfect cup - from
-        bean to brew - in every shipment.
-      </p>
-    </section   >
+    <section id="about">
+      <div>
+        <h1>About Us</h1>
+        <p>
+          Coffeeroasters began its journey of exotic discovery in 1999, highlighting stories of
+          coffee from around the world. We have since been dedicated to bring the perfect cup - from
+          bean to brew - in every shipment.
+        </p>
+      </div>
+    </section>
   
     <section id="commitment">
+      <section>
+        <picture>
+          <!-- Imagem para telas maiores que 1024px -->
+          <source media="(min-width: 1024px)" srcset="assets/img/about/desktop/image-commitment.jpg">
+        
+          <!-- Imagem para telas maiores que 600px -->
+          <source media="(min-width: 700px)" srcset="assets/img/about/tablet/image-commitment.jpg">
+        
+          <!-- Imagem padrão (mobile ou fallback) -->
+          <img src="assets/img/about/mobile/image-commitment.jpg" alt="Descrição da imagem">
+        </picture>
+        
+      </section>
       <h2>Our commitment</h2>
       <p>
         We’re built on a simple mission and a commitment to doing good along the way. We want to

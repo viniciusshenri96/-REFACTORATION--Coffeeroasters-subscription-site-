@@ -1,0 +1,93 @@
+/* VARIABLES CSS */
+:root {
+  /* COLORS */
+  --color-darkCyan: #0e8784;
+  --color-darkGreyBlue: #333d4b;
+  --color-paleOrange: #fdd6ba;
+  --color-lightCream: #fefcf7;
+  --color-grey: #83888f;
+
+  /* COLORS TEXT */
+  --color-primary-text: #fefcf7;
+  --color-second-text: #333d4b;
+  --color-third-text: #83888f;
+
+  /* BACKGROUND COLOR */
+  --color-bg-primary: #fefcf7;
+  --color-bg-second: #2c343e;
+
+/* LINE HEIGHT - TEXT */
+  --lh-xl: 0.48;
+  --lh-l: 1;
+  --lh-m: 1.2;
+  --lh-s: 1.12;
+  --lh-xs: 1.33;
+
+/* LINE HEIGHT - BODY */
+  --lh-body-m: 1.62;
+  --lh-body-s: 1.25;
+
+/* LINE HEIGHT - BUTTON */
+  --lh-button: 1.39;
+
+/* FONT-WEIGHT */
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --fw-black: 900;
+}
+
+/* RESET CSS: REFERENCIA: https://www.joshwcomeau.com/css/custom-css-reset/  */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}

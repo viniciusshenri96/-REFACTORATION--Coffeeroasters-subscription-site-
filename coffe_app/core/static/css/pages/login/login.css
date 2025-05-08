@@ -1,0 +1,216 @@
+/* COLORS */
+:root {
+  --color-darkCyan: #0e8784;
+  --color-darkGreyBlue: #333d4b;
+  --color-paleOrange: #fdd6ba;
+  --color-lightCream: #fefcf7;
+  --color-grey: #83888f;
+
+  /* COLORS TEXT */
+  --color-primary-text: #fefcf7;
+  --color-second-text: #333d4b;
+  --color-third-text: #83888f;
+
+  /* BACKGROUND COLOR */
+  --color-bg-primary: #fefcf7;
+  --color-bg-second: #2c343e;
+}
+
+/* Estilo geral da página */
+body {
+  background: linear-gradient(
+    135deg,
+    var(--color-darkCyan),
+    var(--color-darkGreyBlue)
+  );
+  font-family: "Barlow", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  color: var(--color-primary-text);
+  overflow: hidden;
+}
+
+/* Wrapper de login */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 1000px;
+  animation: fadeIn 1s ease;
+}
+
+/* Coluna com logo */
+.logo-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  margin-right: 2rem; /* Aproximando mais do formulário */
+}
+
+.logo {
+  max-width: 600px; /* Ajuste o tamanho da logo para não ocupar tanto espaço */
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.05); /* Efeito de zoom na logo */
+}
+
+/* Estilo do card de login */
+.login-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 2.5rem 2rem; /* Menos padding para aproximar os elementos */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  max-width: 400px;
+  animation: fadeIn 1.5s ease;
+}
+
+/* Título do card */
+.login-card h1 {
+  font-family: "Fraunces", serif;
+  font-size: 2.8rem;
+  text-align: center;
+  color: var(--color-lightCream);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Subtítulo do card */
+.login-card p.subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--color-third-text);
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+/* Campo de input */
+.input-container input {
+  padding: 1rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--color-primary-text);
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  margin-bottom: 1.8rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Placeholder */
+.input-container input::placeholder {
+  color: var(--color-second-text); /* Cor mais forte para o placeholder */
+  font-style: italic;
+  opacity: 0.8; /* Aumenta a opacidade do placeholder para melhorar a visibilidade */
+  transition: opacity 0.3s ease;
+}
+
+/* Foco no input */
+.input-container input:focus {
+  outline: none;
+  border-color: var(--color-paleOrange);
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 8px var(--color-paleOrange);
+}
+
+/* Placeholder ao focar no input */
+.input-container input:focus::placeholder {
+  opacity: 0.6; /* Menos opacidade para dar mais foco ao texto */
+}
+
+/* Botão de Submit */
+button {
+  padding: 1rem;
+  background: linear-gradient(
+    to right,
+    var(--color-darkCyan),
+    var(--color-paleOrange)
+  );
+  color: var(--color-lightCream);
+  border: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-bottom: 1.8rem;
+}
+
+/* Hover no botão */
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Links extras */
+.extra {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--color-third-text);
+}
+
+.extra a {
+  color: var(--color-paleOrange);
+  text-decoration: none;
+}
+
+.extra a:hover {
+  text-decoration: underline;
+  color: var(--color-lightCream);
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .login-wrapper {
+    flex-direction: column;
+    padding: 1rem;
+    width: 90%;
+  }
+
+  .logo-container {
+    margin-bottom: 1.5rem;
+    margin-right: 0; 
+  }
+
+  .login-card {
+    width: 100%;
+    padding: 2.5rem 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 1rem;
+  }
+}

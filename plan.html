@@ -1,119 +1,202 @@
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffeeroasters | Create your plan</title>
+  </head>
 
-  <title>Frontend Mentor | Coffeeroasters subscription site</title>
-</head>
+  <body>
+    <header>
+      <a href="/index.html" aria-label="Home">
+        <img src="assets/img/shared/desktop/logo.svg" alt="" />
+      </a>
+      <nav>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/plan.html">Create Your Plan</a></li>
+        </ul>
+      </nav>
+    </header>
 
-<body>
-  Home
-  About us
-  Create your plan
+    <main>
+      <section>
+        <img src="assets/img/plan/desktop/image-hero-blackcup.jpg" alt="" />
+        <h1>Create a plan</h1>
+        <p>
+          Build a subscription plan that fits your needs with our selection of
+          artisan coffees.
+        </p>
+      </section>
 
-  Create a plan
-  Build a subscription plan that best fits your needs. We offer an assortment of the best 
-  artisan coffees from around the globe delivered fresh to your door.
+      <section>
+        <h2>How it works</h2>
+        <ol>
+          <li>
+            <h3>Pick your coffee</h3>
+            <p>
+              Select from a range of artisan coffees, ethically sourced and
+              freshly roasted.
+            </p>
+          </li>
+          <li>
+            <h3>Choose the frequency</h3>
+            <p>Customize your order frequency, quantity, and grind type.</p>
+          </li>
+          <li>
+            <h3>Receive and enjoy!</h3>
+            <p>
+              We ship your package within 48 hours, freshly roasted, for you to
+              enjoy.
+            </p>
+          </li>
+        </ol>
+      </section>
 
-  01
-  Pick your coffee
-  Select from our evolving range of artisan coffees. Our beans are ethically
-  sourced and we pay fair prices for them. There's new coffees in all profiles
-  every month for you to try out.
-  
-  02
-  Choose the frequency
-  Customize your order frequency, quantity, even your roast style and grind type.
-  Pause, skip or cancel your subscription with no commitment through our online portal.
-  
-  03
-  Receive and enjoy!
-  We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning
-  world-class coffees curated to provide a distinct tasting experience.
+      <section>
+        <h2>Create your plan</h2>
+        <form id="subscription-form">
+          <div>
+            <button type="button" id="form-preferences">
+              How do you drink your coffee?
+            </button>
+            <fieldset id="coffee-preferences">
+              <input
+                type="radio"
+                name="preferences"
+                value="capsules"
+                id="capsule"
+              />
+              <label for="capsule">Capsule</label>
+              <input
+                type="radio"
+                name="preferences"
+                value="filter"
+                id="filter"
+              />
+              <label for="filter">Filter</label>
+              <input
+                type="radio"
+                name="preferences"
+                value="espresso"
+                id="espresso"
+              />
+              <label for="espresso">Espresso</label>
+            </fieldset>
+          </div>
+          <div>
+            <button type="button" id="form-bean-type">
+              What type of coffee?
+            </button>
+            <fieldset id="bean-type">
+              <input
+                type="radio"
+                name="bean-type"
+                value="single origin"
+                id="single-origin"
+              />
+              <label for="single-origin">Single origin</label>
+              <input type="radio" name="bean-type" value="decaf" id="decaf" />
+              <label for="decaf">Decaf</label>
+              <input
+                type="radio"
+                name="bean-type"
+                value="blended"
+                id="blended"
+              />
+              <label for="blended">Blended</label>
+            </fieldset>
+          </div>
+          <div>
+            <button type="button" id="form-quantity">
+              How much would you like?
+            </button>
+            <fieldset id="coffee-quantity">
+              <input type="radio" name="quantity" value="250g" id="250g" />
+              <label for="250g">250g</label>
+              <input type="radio" name="quantity" value="500g" id="500g" />
+              <label for="500g">500g</label>
+              <input type="radio" name="quantity" value="1000g" id="1000g" />
+              <label for="1000g">1000g</label>
+            </fieldset>
+          </div>
+          <div>
+            <button type="button" id="form-grind">
+              Want us to grind them?
+            </button>
+            <fieldset id="grind">
+              <input
+                type="radio"
+                name="grind"
+                value="wholebean"
+                id="wholebean"
+              />
+              <label for="wholebean">Wholebean</label>
+              <input
+                type="radio"
+                name="grind"
+                value="filter"
+                id="filter-grind"
+              />
+              <label for="filter-grind">Filter</label>
+              <input
+                type="radio"
+                name="grind"
+                value="cafetiére"
+                id="cafetiere"
+              />
+              <label for="cafetiere">Cafetiére</label>
+            </fieldset>
+          </div>
+          <div>
+            <button type="button" id="form-deliveries">
+              How often should we deliver?
+            </button>
+            <fieldset id="delivery">
+              <input
+                type="radio"
+                name="delivery"
+                value="every week"
+                id="every-week"
+              />
+              <label for="every-week">Every week</label>
+              <input
+                type="radio"
+                name="delivery"
+                value="every 2 weeks"
+                id="every-2-weeks"
+              />
+              <label for="every-2-weeks">Every 2 weeks</label>
+              <input
+                type="radio"
+                name="delivery"
+                value="every month"
+                id="every-month"
+              />
+              <label for="every-month">Every month</label>
+            </fieldset>
+          </div>
+          <div>
+            <h3>Order summary</h3>
+            <p>
+              "I drink my coffee as <span class="js-preference">_____</span>,
+              with a <span class="js-bean-type">_____</span> type of bean,
+              <span class="js-quantity">_____</span> ground as
+              <span class="js-grind">_____</span>, delivered
+              <span class="js-delivery">_____</span>."
+            </p>
+          </div>
+          <button type="submit" disabled>Create my plan!</button>
+        </form>
+      </section>
+    </main>
 
-  01 Preferences
-  02 Bean type
-  03 Quantity
-  04 Grind option
-  05 Deliveries
-
-  How do you drink your coffee?
-
-  Capsule
-  Compatible with Nespresso systems and similar brewers
-
-  Filter
-  For pour over or drip methods like Aeropress, Chemex, and V60
-
-  Espresso
-  Dense and finely ground beans for an intense, flavorful experience
-
-  What type of coffee?
-
-  Single origin
-  Distinct, high quality coffee from a specific family-owned farm
-
-  Decaf
-  Just like regular coffee, except the caffeine has been removed
-
-  Blended
-  Combination of two or three dark roasted beans of organic coffees
-
-  How much would you like?
-  250g
-  Perfect for the solo drinker. Yields about 12 delicious cups.
-  
-  500g
-  Perfect option for a couple. Yields about 40 delectable cups.
-
-  1000g
-  Perfect for offices and events. Yields about 90 delightful cups.
-
-  Want us to grind them?
-
-  Wholebean
-  Best choice if you cherish the full sensory experience
-
-  Filter
-  For drip or pour-over coffee methods such as V60 or Aeropress
-
-  Cafetiére
-  Course ground beans specially suited for french press coffee
-
-  How often should we deliver?
-
-  Every week
-  $14.00 per shipment. Includes free first-class shipping.
-
-  Every 2 weeks
-  $17.25 per shipment. Includes free priority shipping.
-
-  Every month
-  $22.50 per shipment. Includes free priority shipping.
-
-  Order Summary
-  “I drink coffee _____, with a _____ type of bean. _____ ground ala _____, 
-  sent to me _____.”
-
-  Create my plan!
-
-  <!-- Modal -->
-  Order Summary
-
-  “I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
-  sent to me _____.”
-
-  Is this correct? You can proceed to checkout or go back to plan selection if something 
-  is off. Subscription discount codes can also be redeemed at the checkout.
-
-  $_____/month
-
-  Checkout
-  <!-- End modal -->
-
-  Home
-  About us
-  Create your plan
-</body>
-
+    <footer>
+      <svg width="237" height="27">
+        <title>Coffeeroasters logo</title>
+        <path d="M40.237 24.95..." />
+      </svg>
+    </footer>
+  </body>
 </html>

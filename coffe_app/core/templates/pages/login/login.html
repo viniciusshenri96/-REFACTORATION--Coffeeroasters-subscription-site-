@@ -1,11 +1,50 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/reset/reset.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/pages/login/login.css' %}" />
   </head>
   <body>
-    <h1>ola mundo</h1>
+    <div class="login-wrapper">
+      <!-- Coluna com a logo -->
+      <div class="logo-container">
+        <img
+          src="{% static 'img/logo.png' %}"
+          alt="Logo da Marca do Café"
+          class="logo"
+        />
+      </div>
+
+      <!-- Formulário de login -->
+      <form class="login-card" method="POST" action="">
+        {% csrf_token %}
+        <h1>Bem-vindo</h1>
+        <p class="subtitle">Acesse sua conta</p>
+
+        <!-- Campo de Usuário -->
+        <div class="input-container">
+          <input type="text" name="username" placeholder="Usuário" required />
+        </div>
+
+        <!-- Campo de Senha -->
+        <div class="input-container">
+          <input type="password" name="password" placeholder="Senha" required />
+        </div>
+
+        <!-- Botão de Submit -->
+        <button type="submit">Entrar</button>
+
+        <!-- Links extras -->
+        <div class="extra">
+          <p>Ainda não tem uma conta?</p>
+          <a href="#">Cadastrar-se</a>
+        </div>
+      </form>
+    </div>
   </body>
 </html>

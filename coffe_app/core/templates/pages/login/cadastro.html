@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="{% static 'css/reset/reset.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/pages/login/cadastro.css' %}" />
+  </head>
+  <body>
+    <div class="cadastro-wrapper">
+      <form class="cadastro-card" method="POST" action="">
+        {% csrf_token %}
+        <h1>Crie sua conta</h1>
+        <p class="subtitle">Preencha os campos abaixo para se cadastrar</p>
+
+        <input type="text" name="username" placeholder="Usuário" required />
+        <input type="password" name="password" placeholder="Senha" required />
+        <input
+          type="password"
+          name="confirm_password"
+          placeholder="Confirme a Senha"
+          required
+        />
+
+        <button type="submit">Cadastrar</button>
+
+        <p class="extra">
+          Já tem uma conta? <a href="{% url 'login' %}">Faça login</a>
+        </p>
+      </form>
+    </div>
+  </body>
+</html>

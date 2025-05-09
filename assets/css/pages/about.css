@@ -1,12 +1,24 @@
 @import url(../core/reset.css);
 
 body{
-    margin: 25px;
+    padding: 0px 25px;
     background-color: var(--color-bg-primary);
+}
+p{
+    font-family: "Barlow";
+    line-height: var(--lh-g);
+}
+img {
+    display: block;
+    max-width: 100%;
 }
 header nav{
     display: flex;
     justify-content: space-between;
+    padding: 2em 0 2em;
+}
+#logo-header{
+    width: 165px;
 }
 #menu-toggle {
     font-size: 24px;
@@ -18,27 +30,103 @@ header nav{
 /* about */
 #about{
     background: url(../../img/about/mobile/image-hero-whitecup.jpg) center / cover no-repeat;
-    height: 500px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
     text-align: center;
+    display: flex;
+    justify-content: center;
+    
     color: var(--color-primary-text);
-    margin: 45px 0px 45px 0px;
-
+    margin-bottom: 7.5em;
+    padding: 7rem 0px;
     border-radius: 15px;
 }
 #about div{
     width: 60%;
 }
 #about h1{
-    font-size: 3.1em;
+    font-size: 2.5rem;
     font-weight: var(--fw-black);
-    margin: 20px 0px 20px 0px;
+    margin-bottom: 1.5rem;
 }
 #about p{
-    font-family: "Barlow"
+    color: rgba(240, 248, 255, 0.795);
 }
+/* commitment */
+#commitment{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 120px;
+}
+/* Estiliza a section com o ID 'commitment-img' */
+#commitment-img {
+    width: 100%;
+    text-align: center;
+}
+
+/* Estiliza a imagem dentro do <picture> */
+#commitment-img img {
+    width: 100%;
+    max-width: 450px;
+    margin: 0px auto;
+    height: auto;
+    border-radius: 10px; 
+}
+#commitment-text{
+    text-align: center;
+    margin: 20px 0;
+}
+#commitment-text h2{
+    font-weight: 900;
+    margin-bottom: 1.8rem;
+    font-size: 2rem;
+}
+#commitment-text p{
+    max-width: 400px;
+    margin: 0 auto;
+    font-weight: 400;
+
+}
+/* Quality */
+#quality{
+    text-align: center;
+    position:relative;
+    background-color: var(--color-darkGreyBlue);
+    color: var(--color-primary-text); 
+    max-width: 900px;
+    border-radius: 10px;
+    padding: 100px 50px;
+    margin-bottom: 50px;
+}
+#quality-img img{
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 10px;
+    max-width: 300px;
+}
+#quality-text h2{
+    font-weight: 900;
+    margin-bottom: 1.8rem;
+    font-size: 2rem;
+}
+#quality-text p{
+    max-width: 400px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+/* headquarters */
+
+#headquarters {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  
+  
+  

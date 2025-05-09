@@ -3,7 +3,8 @@ from django.contrib import messages
 from django.contrib.auth.hashers import make_password, check_password
 from .models import usuario
 
-### LOGIN ###
+
+# === LOGIN ===
 def login_view(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -22,7 +23,7 @@ def login_view(request):
     return render(request, 'pages/login/login.html')
 
 
-### CADASTRO ###
+# === CADASTRO ===
 def cadastro_view(request):
     if request.method == 'POST':
         username = request.POST.get('username')

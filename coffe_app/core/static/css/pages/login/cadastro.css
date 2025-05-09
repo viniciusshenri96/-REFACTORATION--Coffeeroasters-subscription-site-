@@ -1,4 +1,7 @@
-/* VARIABLES */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+
+/* COLORS */
 :root {
   --color-darkCyan: #0e8784;
   --color-darkGreyBlue: #333d4b;
@@ -6,140 +9,228 @@
   --color-lightCream: #fefcf7;
   --color-grey: #83888f;
 
-  /* COLORS TEXT */
+  /* TEXT */
   --color-primary-text: #fefcf7;
   --color-second-text: #333d4b;
   --color-third-text: #83888f;
 
-  /* BACKGROUND COLOR */
-  --color-bg-primary: #fefcf7;
-  --color-bg-second: #2c343e;
+  --color-bg-register: #1a1f25;
 }
 
+/* RESET BASE */
 body {
-  background: linear-gradient(
-    135deg,
-    var(--color-darkGreyBlue),
-    var(--color-darkCyan)
-  );
+  background: linear-gradient(120deg, #1a1f25, #2c343e);
   font-family: "Barlow", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  color: var(--color-primary-text);
+  overflow: hidden;
+}
+
+/* WRAPPER */
+.register-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  overflow: hidden;
+  width: 90%;
+  max-width: 1000px;
   animation: fadeIn 1s ease;
 }
 
-.cadastro-wrapper {
+/* LOGO */
+.logo-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo {
+  max-width: 500px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* CARD */
+.register-card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
   width: 100%;
   max-width: 400px;
-  padding: 2rem;
 }
 
-.cadastro-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(25px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  padding: 3rem 2rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  animation: slideIn 0.8s ease forwards;
-}
-
-.cadastro-card h1 {
+/* TÍTULO */
+.register-card h1 {
   font-family: "Fraunces", serif;
   font-size: 2.5rem;
-  color: var(--color-primary-text);
   text-align: center;
+  color: var(--color-lightCream);
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-.cadastro-card .subtitle {
+.register-card .subtitle {
+  text-align: center;
+  font-size: 1.1rem;
   color: var(--color-third-text);
-  text-align: center;
-  font-size: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
-.cadastro-card input {
-  padding: 1rem;
+/* INPUTS */
+.input-container {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.07);
   border-radius: 10px;
-  border: 2px solid transparent;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  font-size: 1rem;
-  transition: all 0.3s ease;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1.5rem;
+  transition: 0.3s ease;
 }
 
-.cadastro-card input:focus {
-  outline: none;
-  border-color: var(--color-paleOrange);
-  background-color: rgba(255, 255, 255, 0.2);
+.input-container i {
+  color: var(--color-third-text);
+  margin-right: 10px;
 }
 
-.cadastro-card input::placeholder {
-  color: #ccc;
-}
-
-.cadastro-card button {
-  padding: 1rem;
-  background: linear-gradient(to right, var(--color-darkCyan), #25b8b2);
-  color: #fff;
-  font-size: 1rem;
-  font-weight: var(--fw-bold);
+.input-container input {
   border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  background: transparent;
+  color: var(--color-primary-text);
+  width: 100%;
+  font-size: 1rem;
+  outline: none;
 }
 
-.cadastro-card button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.6);
-}
-
-.cadastro-card button:active {
-  transform: scale(0.95);
-}
-
-.cadastro-card .extra {
+.input-container input::placeholder {
   color: var(--color-third-text);
-  font-size: 0.9rem;
-  text-align: center;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.input-container:focus-within {
+  border: 1px solid var(--color-paleOrange);
+  box-shadow: 0 0 8px var(--color-paleOrange);
+}
+
+/* BOTÃO */
+button {
+  padding: 1rem;
+  background: linear-gradient(
+    to right,
+    var(--color-darkCyan),
+    var(--color-paleOrange)
+  );
+  color: var(--color-lightCream);
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 8px;
   cursor: pointer;
-  transition: color 0.3s;
+  transition: 0.3s ease;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
 }
 
-.cadastro-card .extra:hover {
+button:hover {
+  transform: scale(1.05);
+}
+
+/* DIVIDER */
+.divider {
+  text-align: center;
+  margin: 1rem 0;
+  color: var(--color-third-text);
+}
+
+/* SOCIAL LOGIN */
+.social-login {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 1.5rem;
+}
+
+.btn-social {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-social.google {
+  background-color: #db4437;
+}
+
+.btn-social.github {
+  background-color: #24292e;
+}
+
+.btn-social:hover {
+  transform: scale(1.1);
+}
+
+/* LINKS EXTRAS */
+.extra {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--color-third-text);
+}
+
+.extra a {
   color: var(--color-paleOrange);
+  text-decoration: none;
 }
 
+.extra a:hover {
+  color: var(--color-lightCream);
+  text-decoration: underline;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .register-wrapper {
+    flex-direction: column;
+    padding: 1rem;
+    width: 95%;
+  }
+
+  .logo-container {
+    margin-bottom: 1rem;
+  }
+
+  .register-card {
+    width: 100%;
+  }
+}
+
+/* ANIMAÇÃO */
 @keyframes fadeIn {
   from {
     opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@media (max-width: 400px) {
-  .cadastro-card {
-    padding: 2rem 1rem;
   }
 }

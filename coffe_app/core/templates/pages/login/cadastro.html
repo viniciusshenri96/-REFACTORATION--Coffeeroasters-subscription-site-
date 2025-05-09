@@ -5,31 +5,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="{% static 'css/reset/reset.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/pages/login/cadastro.css' %}" />
+    <title>Criar Conta</title>
+    <link rel="stylesheet" href="{% static 'css/reset/reset.css' %}?v=1" />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/pages/login/cadastro.css' %}?v=1"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
   <body>
-    <div class="cadastro-wrapper">
-      <form class="cadastro-card" method="POST" action="">
+    <div class="register-wrapper">
+      <div class="logo-container">
+        <img src="{% static 'img/logo.png' %}" alt="Logo" class="logo" />
+      </div>
+
+      <form class="register-card" method="POST">
         {% csrf_token %}
         <h1>Crie sua conta</h1>
-        <p class="subtitle">Preencha os campos abaixo para se cadastrar</p>
+        <p class="subtitle">Preencha os dados abaixo</p>
 
-        <input type="text" name="username" placeholder="Usuário" required />
-        <input type="password" name="password" placeholder="Senha" required />
-        <input
-          type="password"
-          name="confirm_password"
-          placeholder="Confirme a Senha"
-          required
-        />
+        <div class="input-container">
+          <i class="fas fa-user"></i>
+          <input type="text" name="username" placeholder="Usuário" required />
+        </div>
+
+        <div class="input-container">
+          <i class="fas fa-lock"></i>
+          <input type="password" name="password" placeholder="Senha" required />
+        </div>
+
+        <div class="input-container">
+          <i class="fas fa-lock"></i>
+          <input
+            type="password"
+            name="confirm_password"
+            placeholder="Confirme a Senha"
+            required
+          />
+        </div>
 
         <button type="submit">Cadastrar</button>
 
-        <p class="extra">
-          Já tem uma conta? <a href="{% url 'login' %}">Faça login</a>
-        </p>
+        <div class="divider">ou</div>
+
+        <div class="social-login">
+          <a href="#" class="btn-social google" title="Google">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="#" class="btn-social github" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+
+        <div class="extra">
+          <p>Já tem uma conta?</p>
+          <a href="{% url 'login' %}">Entrar</a>
+        </div>
       </form>
     </div>
   </body>

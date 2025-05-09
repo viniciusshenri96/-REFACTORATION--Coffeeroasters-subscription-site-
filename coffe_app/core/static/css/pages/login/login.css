@@ -1,4 +1,7 @@
-/* COLORS */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+/* === VARIÁVEIS === */
 :root {
   --color-darkCyan: #0e8784;
   --color-darkGreyBlue: #333d4b;
@@ -6,17 +9,15 @@
   --color-lightCream: #fefcf7;
   --color-grey: #83888f;
 
-  /* COLORS TEXT */
   --color-primary-text: #fefcf7;
   --color-second-text: #333d4b;
   --color-third-text: #83888f;
 
-  /* BACKGROUND COLOR */
   --color-bg-primary: #fefcf7;
   --color-bg-second: #2c343e;
 }
 
-/* Estilo geral da página */
+/* === BASE === */
 body {
   background: linear-gradient(
     135deg,
@@ -33,7 +34,7 @@ body {
   overflow: hidden;
 }
 
-/* Wrapper de login */
+/* === WRAPPER === */
 .login-wrapper {
   display: flex;
   justify-content: center;
@@ -43,94 +44,85 @@ body {
   animation: fadeIn 1s ease;
 }
 
-/* Coluna com logo */
+/* === LOGO === */
 .logo-container {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 1rem;
-  margin-right: 2rem; /* Aproximando mais do formulário */
+  margin-right: 2rem;
 }
-
 .logo {
-  max-width: 600px; /* Ajuste o tamanho da logo para não ocupar tanto espaço */
+  max-width: 450px;
   transition: transform 0.3s ease-in-out;
 }
-
 .logo:hover {
-  transform: scale(1.05); /* Efeito de zoom na logo */
+  transform: scale(1.05);
 }
 
-/* Estilo do card de login */
+/* === CARD LOGIN === */
 .login-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 16px;
-  padding: 2.5rem 2rem; /* Menos padding para aproximar os elementos */
+  padding: 2.5rem 2rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
-  width: 100%;
   max-width: 400px;
+  width: 100%;
   animation: fadeIn 1.5s ease;
 }
 
-/* Título do card */
 .login-card h1 {
   font-family: "Fraunces", serif;
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   text-align: center;
-  color: var(--color-lightCream);
   margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-/* Subtítulo do card */
-.login-card p.subtitle {
+.login-card .subtitle {
   text-align: center;
   font-size: 1.2rem;
   color: var(--color-third-text);
   margin-bottom: 2rem;
-  font-weight: 300;
 }
 
-/* Campo de input */
-.input-container input {
-  padding: 1rem;
-  border: 2px solid transparent;
+/* === INPUT CONTAINER COM ÍCONES === */
+.input-container {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: var(--color-primary-text);
-  font-size: 1.1rem;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid transparent;
   transition: all 0.3s ease;
-  margin-bottom: 1.8rem;
-  width: 100%;
-  box-sizing: border-box;
 }
-
-/* Placeholder */
-.input-container input::placeholder {
-  color: var(--color-second-text); /* Cor mais forte para o placeholder */
-  font-style: italic;
-  opacity: 0.8; /* Aumenta a opacidade do placeholder para melhorar a visibilidade */
-  transition: opacity 0.3s ease;
+.input-container i {
+  color: var(--color-lightCream);
+  font-size: 1.2rem;
+  margin-right: 0.8rem;
 }
-
-/* Foco no input */
-.input-container input:focus {
+.input-container input {
+  background: transparent;
+  border: none;
   outline: none;
+  color: var(--color-primary-text);
+  font-size: 1rem;
+  flex: 1;
+}
+.input-container:focus-within {
   border-color: var(--color-paleOrange);
-  background-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 0 8px var(--color-paleOrange);
+  box-shadow: 0 0 10px var(--color-paleOrange);
+}
+.input-container input::placeholder {
+  color: var(--color-third-text);
+  opacity: 0.8;
 }
 
-/* Placeholder ao focar no input */
-.input-container input:focus::placeholder {
-  opacity: 0.6; /* Menos opacidade para dar mais foco ao texto */
-}
-
-/* Botão de Submit */
+/* === BOTÃO LOGIN === */
 button {
   padding: 1rem;
   background: linear-gradient(
@@ -139,41 +131,74 @@ button {
     var(--color-paleOrange)
   );
   color: var(--color-lightCream);
-  border: none;
   font-weight: bold;
   font-size: 1.1rem;
+  border: none;
   border-radius: 8px;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
   width: 100%;
-  margin-bottom: 1.8rem;
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
 }
-
-/* Hover no botão */
 button:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Links extras */
+/* === DIVIDER === */
+.divider {
+  text-align: center;
+  margin: 1rem 0;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+/* === SOCIAL LOGIN BOLINHAS === */
+.social-login {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 1.5rem;
+}
+.social-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.4rem;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.social-btn.google {
+  background-color: #db4437;
+}
+.social-btn.github {
+  background-color: #24292e;
+}
+.social-btn:hover {
+  transform: scale(1.15);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* === EXTRA === */
 .extra {
   text-align: center;
   font-size: 1rem;
   color: var(--color-third-text);
 }
-
 .extra a {
   color: var(--color-paleOrange);
   text-decoration: none;
 }
-
 .extra a:hover {
   text-decoration: underline;
   color: var(--color-lightCream);
 }
 
-/* Animações */
+/* === ANIMAÇÃO === */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -185,32 +210,19 @@ button:hover {
   }
 }
 
+/* === RESPONSIVO === */
 @media (max-width: 768px) {
   .login-wrapper {
     flex-direction: column;
     padding: 1rem;
     width: 90%;
   }
-
   .logo-container {
     margin-bottom: 1.5rem;
-    margin-right: 0; 
+    margin-right: 0;
   }
-
   .login-card {
     width: 100%;
-    padding: 2.5rem 1.5rem;
-  }
-
-  h1 {
-    font-size: 2.2rem;
-  }
-
-  .subtitle {
-    font-size: 1rem;
-  }
-
-  button {
-    padding: 1rem;
+    padding: 2rem 1.2rem;
   }
 }

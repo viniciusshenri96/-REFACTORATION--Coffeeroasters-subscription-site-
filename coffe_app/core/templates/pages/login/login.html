@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -8,10 +7,17 @@
     <title>Login</title>
     <link rel="stylesheet" href="{% static 'css/reset/reset.css' %}" />
     <link rel="stylesheet" href="{% static 'css/pages/login/login.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div class="login-wrapper">
-      <!-- Coluna com a logo -->
+      <!-- LOGO -->
       <div class="logo-container">
         <img
           src="{% static 'img/logo.png' %}"
@@ -20,26 +26,41 @@
         />
       </div>
 
-      <!-- Formulário de login -->
+      <!-- FORMULÁRIO -->
       <form class="login-card" method="POST" action="">
         {% csrf_token %}
         <h1>Bem-vindo</h1>
         <p class="subtitle">Acesse sua conta</p>
 
-        <!-- Campo de Usuário -->
+        <!-- Usuário -->
         <div class="input-container">
+          <i class="fas fa-user"></i>
           <input type="text" name="username" placeholder="Usuário" required />
         </div>
 
-        <!-- Campo de Senha -->
+        <!-- Senha -->
         <div class="input-container">
+          <i class="fas fa-lock"></i>
           <input type="password" name="password" placeholder="Senha" required />
         </div>
 
-        <!-- Botão de Submit -->
+        <!-- Botão Entrar -->
         <button type="submit">Entrar</button>
 
-        <!-- Links extras -->
+        <!-- Divisor -->
+        <div class="divider">ou entre com</div>
+
+        <!-- SOCIAL LOGIN -->
+        <div class="social-login">
+          <a href="#" class="social-btn google">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="#" class="social-btn github">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+
+        <!-- Link cadastro -->
         <div class="extra">
           <p>Ainda não tem uma conta?</p>
           <a href="{% url 'cadastro' %}">Cadastrar-se</a>

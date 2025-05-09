@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'core'
+    'core',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -121,3 +122,16 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Adicionar as credenciais para Google OAuth2
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '1000684092450-tldd6atet07nk72m9g1q953unru2om8c.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
+
+# Definir os backends de autenticação
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.google.GoogleOAuth2',  # Google OAuth2
+    'django.contrib.auth.backends.ModelBackend',  # Backend padrão do Django
+)
+
+LOGIN_REDIRECT_URL = '/'  

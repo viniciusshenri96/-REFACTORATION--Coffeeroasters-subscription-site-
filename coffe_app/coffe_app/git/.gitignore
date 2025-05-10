@@ -12,6 +12,8 @@ __pycache__/
 *.db
 *.sqlite3
 *.db-journal
+coffe_app/db.sqlite3
+
 
 # Virtualenv
 .venv/

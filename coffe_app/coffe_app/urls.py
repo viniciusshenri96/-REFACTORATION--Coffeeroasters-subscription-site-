@@ -5,4 +5,5 @@ urlpatterns = [
     path('', views.login_view, name='login'),
     path('cadastro/', views.cadastro_view, name='cadastro'),
     path('auth/', include('social_django.urls', namespace='social')), 
+    path('home/', views.home_view, name='home'),
 ]

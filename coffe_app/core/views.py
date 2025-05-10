@@ -43,3 +43,7 @@ def cadastro_view(request):
         return redirect('login')
 
     return render(request, 'pages/login/cadastro.html')
+
+
+def home_view(request):
+    return render(request, 'pages/home/home.html')

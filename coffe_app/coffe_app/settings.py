@@ -137,4 +137,4 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',  # Backend padrão do Django
 )
 
-LOGIN_REDIRECT_URL = '/'  
+LOGIN_REDIRECT_URL = '/home/'  

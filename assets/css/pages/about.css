@@ -4,6 +4,11 @@ body{
     padding: 0px 25px;
     background-color: var(--color-bg-primary);
 }
+h2{
+    font-weight: 900;
+    margin-bottom: 1.8rem;
+    font-size: 2rem;
+}
 p{
     font-family: "Barlow";
     line-height: var(--lh-g);
@@ -17,6 +22,11 @@ header nav{
     justify-content: space-between;
     padding: 2em 0 2em;
 }
+a{
+    text-decoration: none;
+    color: var(--color-second-text);
+    font-weight: bold;
+}
 #logo-header{
     width: 165px;
 }
@@ -27,6 +37,7 @@ header nav{
   }
 
 /* Main */
+
 /* about */
 #about{
     background: url(../../img/about/mobile/image-hero-whitecup.jpg) center / cover no-repeat;
@@ -85,15 +96,17 @@ header nav{
     font-weight: 400;
 
 }
+
 /* Quality */
 #quality{
     text-align: center;
     position:relative;
     background-color: var(--color-darkGreyBlue);
     color: var(--color-primary-text); 
-    max-width: 900px;
+    max-width: 1200px;
     border-radius: 10px;
     padding: 100px 50px;
+    margin: 0 auto;
     margin-bottom: 50px;
 }
 #quality-img img{
@@ -104,29 +117,76 @@ header nav{
     border-radius: 10px;
     max-width: 300px;
 }
-#quality-text h2{
-    font-weight: 900;
-    margin-bottom: 1.8rem;
-    font-size: 2rem;
-}
-#quality-text p{
-    max-width: 400px;
-    margin: 0 auto;
-    font-weight: 400;
-}
 
 /* headquarters */
-
 #headquarters {
     max-width: 900px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 40px;
 
+}
+#headquarters h2{
+    text-align: center;
+}
+#headquarters-blocks{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.headquarters-item{
+    text-align: center;
+}
+.headquarters-item img{
+    margin: 10px auto;
+}
 
-  }
-  
-  
-  
+/* footer */
+#footer{
+    background-color: var(--color-bg-second);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+#logo-footer{
+    margin: 15px auto;
+}
+#footer li{
+    display: flex;
+    flex-direction: column;
+
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.footer-itens-links{
+    padding: 0;
+    text-align: center;
+}
+.footer-itens-links a{
+    color: var(--color-third-text);
+    list-style: none;
+    padding: 0;
+}
+#social-medias-footer{
+    display: flex;
+    gap: 20px;
+}
+/* Final Display Mobile */
+
+/* Display tablet*/
+@media(min-width: 700px) and (max-width: 1024px){
+    #commitment{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 200px;
+    }
+    #commitment-img{
+        width: 350px;
+    }
+}
+
+/* Displey desktop*/

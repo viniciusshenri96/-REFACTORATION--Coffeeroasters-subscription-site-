@@ -17,6 +17,9 @@ img {
     display: block;
     max-width: 100%;
 }
+
+/* header */
+
 header nav{
     display: flex;
     justify-content: space-between;
@@ -28,13 +31,17 @@ a{
     font-weight: bold;
 }
 #logo-header{
-    width: 165px;
+    min-width: 165px;
 }
 #menu-toggle {
     font-size: 24px;
     cursor: pointer;
     color: #333;
-  }
+}
+#menu-hamburguer-header-list{
+    display: flex;
+    flex-direction: row;
+}
 
 /* Main */
 
@@ -174,10 +181,27 @@ a{
     display: flex;
     gap: 20px;
 }
+#logo-footer{
+    filter: brightness(500%);
+}
 /* Final Display Mobile */
 
 /* Display tablet*/
 @media(min-width: 700px) and (max-width: 1024px){
+    /* header */
+    #menu-toggle {
+    display: none;
+    }
+
+    /* main */
+    #about{
+        background: url(../../img/about/tablet/image-hero-whitecup.jpg) center / cover no-repeat;
+        text-align: left;
+        display: flex;
+        justify-content: left;
+        
+        padding: 7rem 55px;
+    }
     #commitment{
         flex-direction: row;
         align-items: center;
@@ -187,6 +211,40 @@ a{
     #commitment-img{
         width: 350px;
     }
+    #about{
+        text-align: left;
+    }
 }
 
 /* Displey desktop*/
+
+@media(min-width: 1025px){
+    /* header */
+    #menu-toggle {
+    display: none;
+    }
+    
+    /* main */
+    #about{
+        background: url(../../img/about/desktop/image-hero-whitecup.jpg) center / cover no-repeat;
+        text-align: left;
+        display: flex;
+        justify-content: left;
+        
+        padding: 7rem 55px;
+    
+    }
+    #commitment{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 20%;
+
+        margin: auto;
+        margin-bottom: 200px;
+        max-width: 80%;
+    }
+    #commitment-img{
+        width: 450px;
+    }
+}

@@ -23,7 +23,7 @@ img {
 header nav{
     display: flex;
     justify-content: space-between;
-    padding: 2em 0 2em;
+    padding: 2em 0;
 }
 a{
     text-decoration: none;
@@ -31,7 +31,8 @@ a{
     font-weight: bold;
 }
 #logo-header{
-    min-width: 165px;
+    max-width: 165px;
+    margin: 0;
 }
 #menu-toggle {
     font-size: 24px;
@@ -39,8 +40,7 @@ a{
     color: #333;
 }
 #menu-hamburguer-header-list{
-    display: flex;
-    flex-direction: row;
+    display: none;
 }
 
 /* Main */
@@ -192,6 +192,10 @@ a{
     #menu-toggle {
     display: none;
     }
+    #menu-hamburguer-header-list{
+        display: flex;
+        flex-direction: row;
+    }
 
     /* main */
     #about{
@@ -211,9 +215,7 @@ a{
     #commitment-img{
         width: 350px;
     }
-    #about{
-        text-align: left;
-    }
+    
 }
 
 /* Displey desktop*/
@@ -224,6 +226,10 @@ a{
     display: none;
     }
     
+    #menu-hamburguer-header-list{
+        display: flex;
+        flex-direction: row;
+    }
     /* main */
     #about{
         background: url(../../img/about/desktop/image-hero-whitecup.jpg) center / cover no-repeat;
@@ -233,6 +239,10 @@ a{
         
         padding: 7rem 55px;
     
+    }
+
+    #about p{
+        max-width: 400px;
     }
     #commitment{
         flex-direction: row;
@@ -247,4 +257,14 @@ a{
     #commitment-img{
         width: 450px;
     }
+    #headquarters h2{
+        font-size: 2.5em;
+    }
+    #headquarters-blocks{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 100px 0;
+    }
+    
 }
